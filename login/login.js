@@ -18,7 +18,12 @@ btn.addEventListener("click", () => {
                     title: "Missing fields",
                     text: "Please fill email and password"
                 });
-                return;
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Error",
+                    text: error.message
+                });
             }
 
         });
